@@ -1,10 +1,54 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
-    <Button
-        android:id="@+id/loginBtn"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    android:minWidth="25px"
+    android:minHeight="25px">
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:id="@+id/Logo"
+        android:src="@drawable/Logo"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="120dp" />
+    <TextView
+        android:text="Log In to your Account"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_below="@id/Logo"
+        android:id="@+id/subtitle"
+        android:layout_centerInParent="true"
+        android:textSize="16sp"
+        android:textColor="#ffffff"
+        android:layout_marginTop="10dp" />
+    <Button
+        android:text="Sign In with Facebook"
         android:layout_width="match_parent"
-        android:text="Login" />
+        android:layout_height="wrap_content"
+        android:id="@+id/btnFacebook"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:background="@drawable/fb_rounded_button"
+        android:textColor="#ffffff"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/subtitle"
+        android:drawableRight="@drawable/ForwardArrow"
+        android:padding="10dp"
+        android:layout_marginTop="200dp" />
+    <Button
+        android:text="Sign In with Google"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnGoogle"
+        android:layout_below="@id/btnFacebook"
+        android:layout_centerInParent="true"
+        android:padding="10dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:background="@drawable/google_rounded_button"
+        android:textColor="#ffffff"
+        android:layout_marginTop="30dp"
+        android:drawableRight="@drawable/ForwardArrow" />
 </RelativeLayout>

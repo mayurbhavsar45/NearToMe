@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
   <string name="app_name">NearToMe.Droid</string>
+  <string name="GoogleKey">AIzaSyCag5B2m7ZdV89s3zscR903pbUg13Xb6KI</string> 
 </resources>

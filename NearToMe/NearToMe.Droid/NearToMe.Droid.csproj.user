@@ -4,5 +4,6 @@
     <SelectedDevice>4.7" Lollipop %285.0%29 XXHDPI Phone</SelectedDevice>
     <DefaultDevice>4.7" Lollipop %285.0%29 XXHDPI Phone</DefaultDevice>
     <AndroidDesignerPreferredDevice>Nexus 4</AndroidDesignerPreferredDevice>
+    <AndroidDesignerPreferredTheme>NTMTheme</AndroidDesignerPreferredTheme>
   </PropertyGroup>
 </Project>

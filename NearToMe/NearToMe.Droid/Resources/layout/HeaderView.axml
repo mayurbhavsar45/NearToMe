@@ -9,6 +9,6 @@
         android:layout_centerInParent="true"
         android:text="Title"
         android:gravity="center"
-        android:textColor="@color/ColorWhite"
+        android:textColor="#333333"
         android:textSize="@dimen/textSize_18" />
 </RelativeLayout>
