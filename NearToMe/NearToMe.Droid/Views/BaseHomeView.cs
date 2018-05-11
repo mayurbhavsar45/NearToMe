@@ -19,13 +19,13 @@ namespace NearToMe.Droid.Views
         {
             RequestWindowFeature(WindowFeatures.NoTitle);
             base.OnCreate(savedInstanceState);
-            SetContentView(Resource.Layout.HomeView);
+            //SetContentView(Resource.Layout.HomeView);
             _thisViewModel = ViewModel;
             this.Window.SetSoftInputMode(SoftInput.AdjustPan);
             SetUI();
             if (savedInstanceState == null)
             {
-                NavigateToFragment<HomeFragment>("HomeFragment", true);
+              //  NavigateToFragment<HomeFragment>("HomeFragment", true);
             }
         }
         private void SetUI()
@@ -38,25 +38,25 @@ namespace NearToMe.Droid.Views
         /// <param name="fragmentId">fragment name for identifing in back stack.</param>
         /// <param name="isaddToBackStack">If set to <c>true</c> is previous fragment to back stack.</param>
         /// <typeparam name="TFragment">The fragment type parameter.</typeparam>
-        private void NavigateToFragment<TFragment>(string fragmentId, bool isaddToBackStack, bool isPopBackIfExist = true) where TFragment : Android.Support.V4.App.Fragment
-        {
-            if (isPopBackIfExist && IsFragmentInBackStack(fragmentId))
-            {
-                this.SupportFragmentManager.PopBackStackImmediate(fragmentId, (int)PopBackStackFlags.None);
-            }
-            else
-            {
-                var fragment = Activator.CreateInstance<TFragment>();
-                var fragmentInstanance = fragment;
-                var fragmenttransaction = this.SupportFragmentManager.BeginTransaction();
-                fragmenttransaction.Replace(Resource.Id.content_frame, fragmentInstanance, fragmentId);
-                if (isaddToBackStack)
-                {
-                    fragmenttransaction.AddToBackStack(fragmentId);
-                }
-                fragmenttransaction.Commit();
-            }
-        }
+        //private void NavigateToFragment<TFragment>(string fragmentId, bool isaddToBackStack, bool isPopBackIfExist = true) where TFragment : Android.Support.V4.App.Fragment
+        //{
+        //    if (isPopBackIfExist && IsFragmentInBackStack(fragmentId))
+        //    {
+        //        this.SupportFragmentManager.PopBackStackImmediate(fragmentId, (int)PopBackStackFlags.None);
+        //    }
+        //    else
+        //    {
+        //        var fragment = Activator.CreateInstance<TFragment>();
+        //        var fragmentInstanance = fragment;
+        //        var fragmenttransaction = this.SupportFragmentManager.BeginTransaction();
+        //        //fragmenttransaction.Replace(Resource.Id.content_frame, fragmentInstanance, fragmentId);
+        //        if (isaddToBackStack)
+        //        {
+        //            fragmenttransaction.AddToBackStack(fragmentId);
+        //        }
+        //        fragmenttransaction.Commit();
+        //    }
+        //}
         private bool IsFragmentInBackStack(string fragmentId)
         {
             return SupportFragmentManager.FindFragmentByTag(fragmentId) != null;

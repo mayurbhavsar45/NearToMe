@@ -13,7 +13,7 @@ namespace NearToMe.Core
                 .AsInterfaces()
                 .RegisterAsLazySingleton();
 
-            RegisterNavigationServiceAppStart<LoginViewModel>();
+            RegisterNavigationServiceAppStart<SplashViewModel>();
         }
     }
 }

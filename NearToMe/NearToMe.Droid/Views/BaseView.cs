@@ -9,13 +9,14 @@ using Android.OS;
 using Android.Runtime;
 using Android.Views;
 using Android.Widget;
+using MvvmCross.Droid.Support.V7.AppCompat;
 using MvvmCross.Droid.Views;
 using NearToMe.Core.ViewModels;
 
 namespace NearToMe.Droid.Views
 {
-    [Activity(Label = "BaseView")]
-    public abstract class BaseView<TViewModel> : MvxActivity<TViewModel> where TViewModel :BaseViewModel
+    [Activity(Label = "BaseView", Theme = "@style/NTMTheme.Base")]
+    public abstract class BaseView<TViewModel> : MvxAppCompatActivity<TViewModel> where TViewModel :BaseViewModel
     {
         protected abstract int LayoutResource
         {
@@ -26,7 +27,6 @@ namespace NearToMe.Droid.Views
             base.OnCreate(savedInstanceState);
             RequestWindowFeature(WindowFeatures.NoTitle);
             SetContentView(LayoutResource);
-        }
-        
+        }     
     }
 }
