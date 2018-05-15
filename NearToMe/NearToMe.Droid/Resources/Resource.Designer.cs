@@ -5096,8 +5096,8 @@ namespace NearToMe.Droid
 			// aapt resource value: 0x7f0d00c1
 			public const int Logo = 2131558593;
 			
-			// aapt resource value: 0x7f0d00c7
-			public const int Logout = 2131558599;
+			// aapt resource value: 0x7f0d00c8
+			public const int Logout = 2131558600;
 			
 			// aapt resource value: 0x7f0d0052
 			public const int META = 2131558482;
@@ -5114,8 +5114,8 @@ namespace NearToMe.Droid
 			// aapt resource value: 0x7f0d0054
 			public const int SYM = 2131558484;
 			
-			// aapt resource value: 0x7f0d00cd
-			public const int action0 = 2131558605;
+			// aapt resource value: 0x7f0d00ce
+			public const int action0 = 2131558606;
 			
 			// aapt resource value: 0x7f0d0093
 			public const int action_bar = 2131558547;
@@ -5138,17 +5138,17 @@ namespace NearToMe.Droid
 			// aapt resource value: 0x7f0d0071
 			public const int action_bar_title = 2131558513;
 			
-			// aapt resource value: 0x7f0d00ca
-			public const int action_container = 2131558602;
+			// aapt resource value: 0x7f0d00cb
+			public const int action_container = 2131558603;
 			
 			// aapt resource value: 0x7f0d0094
 			public const int action_context_bar = 2131558548;
 			
-			// aapt resource value: 0x7f0d00d1
-			public const int action_divider = 2131558609;
+			// aapt resource value: 0x7f0d00d2
+			public const int action_divider = 2131558610;
 			
-			// aapt resource value: 0x7f0d00cb
-			public const int action_image = 2131558603;
+			// aapt resource value: 0x7f0d00cc
+			public const int action_image = 2131558604;
 			
 			// aapt resource value: 0x7f0d0003
 			public const int action_menu_divider = 2131558403;
@@ -5165,11 +5165,11 @@ namespace NearToMe.Droid
 			// aapt resource value: 0x7f0d0073
 			public const int action_mode_close_button = 2131558515;
 			
-			// aapt resource value: 0x7f0d00cc
-			public const int action_text = 2131558604;
+			// aapt resource value: 0x7f0d00cd
+			public const int action_text = 2131558605;
 			
-			// aapt resource value: 0x7f0d00da
-			public const int actions = 2131558618;
+			// aapt resource value: 0x7f0d00db
+			public const int actions = 2131558619;
 			
 			// aapt resource value: 0x7f0d0074
 			public const int activity_chooser_view_content = 2131558516;
@@ -5213,11 +5213,14 @@ namespace NearToMe.Droid
 			// aapt resource value: 0x7f0d002f
 			public const int box_count = 2131558447;
 			
-			// aapt resource value: 0x7f0d00c4
-			public const int btnFacebook = 2131558596;
+			// aapt resource value: 0x7f0d00c5
+			public const int btnFacebook = 2131558597;
 			
 			// aapt resource value: 0x7f0d00c3
 			public const int btnGoogle = 2131558595;
+			
+			// aapt resource value: 0x7f0d00c4
+			public const int btnfb = 2131558596;
 			
 			// aapt resource value: 0x7f0d0030
 			public const int button = 2131558448;
@@ -5225,8 +5228,8 @@ namespace NearToMe.Droid
 			// aapt resource value: 0x7f0d007a
 			public const int buttonPanel = 2131558522;
 			
-			// aapt resource value: 0x7f0d00ce
-			public const int cancel_action = 2131558606;
+			// aapt resource value: 0x7f0d00cf
+			public const int cancel_action = 2131558607;
 			
 			// aapt resource value: 0x7f0d00a6
 			public const int cancel_button = 2131558566;
@@ -5243,8 +5246,8 @@ namespace NearToMe.Droid
 			// aapt resource value: 0x7f0d008a
 			public const int checkbox = 2131558538;
 			
-			// aapt resource value: 0x7f0d00d6
-			public const int chronometer = 2131558614;
+			// aapt resource value: 0x7f0d00d7
+			public const int chronometer = 2131558615;
 			
 			// aapt resource value: 0x7f0d0065
 			public const int clip_horizontal = 2131558501;
@@ -5345,8 +5348,8 @@ namespace NearToMe.Droid
 			// aapt resource value: 0x7f0d004d
 			public const int end = 2131558477;
 			
-			// aapt resource value: 0x7f0d00dc
-			public const int end_padder = 2131558620;
+			// aapt resource value: 0x7f0d00dd
+			public const int end_padder = 2131558621;
 			
 			// aapt resource value: 0x7f0d005a
 			public const int enterAlways = 2131558490;
@@ -5381,8 +5384,8 @@ namespace NearToMe.Droid
 			// aapt resource value: 0x7f0d000a
 			public const int ghost_view = 2131558410;
 			
-			// aapt resource value: 0x7f0d00c8
-			public const int googlemap = 2131558600;
+			// aapt resource value: 0x7f0d00c9
+			public const int googlemap = 2131558601;
 			
 			// aapt resource value: 0x7f0d00be
 			public const int headerLayout = 2131558590;
@@ -5399,8 +5402,8 @@ namespace NearToMe.Droid
 			// aapt resource value: 0x7f0d0079
 			public const int icon = 2131558521;
 			
-			// aapt resource value: 0x7f0d00db
-			public const int icon_group = 2131558619;
+			// aapt resource value: 0x7f0d00dc
+			public const int icon_group = 2131558620;
 			
 			// aapt resource value: 0x7f0d0026
 			public const int icon_only = 2131558438;
@@ -5411,8 +5414,8 @@ namespace NearToMe.Droid
 			// aapt resource value: 0x7f0d0076
 			public const int image = 2131558518;
 			
-			// aapt resource value: 0x7f0d00d7
-			public const int info = 2131558615;
+			// aapt resource value: 0x7f0d00d8
+			public const int info = 2131558616;
 			
 			// aapt resource value: 0x7f0d0032
 			public const int inline = 2131558450;
@@ -5429,8 +5432,8 @@ namespace NearToMe.Droid
 			// aapt resource value: 0x7f0d00b0
 			public const int largeLabel = 2131558576;
 			
-			// aapt resource value: 0x7f0d00c6
-			public const int lblTitle = 2131558598;
+			// aapt resource value: 0x7f0d00c7
+			public const int lblTitle = 2131558599;
 			
 			// aapt resource value: 0x7f0d0035
 			public const int left = 2131558453;
@@ -5450,17 +5453,17 @@ namespace NearToMe.Droid
 			// aapt resource value: 0x7f0d0078
 			public const int list_item = 2131558520;
 			
-			// aapt resource value: 0x7f0d00df
-			public const int masked = 2131558623;
+			// aapt resource value: 0x7f0d00e0
+			public const int masked = 2131558624;
 			
-			// aapt resource value: 0x7f0d00d0
-			public const int media_actions = 2131558608;
+			// aapt resource value: 0x7f0d00d1
+			public const int media_actions = 2131558609;
 			
-			// aapt resource value: 0x7f0d00dd
-			public const int message = 2131558621;
+			// aapt resource value: 0x7f0d00de
+			public const int message = 2131558622;
 			
-			// aapt resource value: 0x7f0d00c9
-			public const int messenger_send_button = 2131558601;
+			// aapt resource value: 0x7f0d00ca
+			public const int messenger_send_button = 2131558602;
 			
 			// aapt resource value: 0x7f0d004e
 			public const int middle = 2131558478;
@@ -5486,14 +5489,14 @@ namespace NearToMe.Droid
 			// aapt resource value: 0x7f0d0021
 			public const int normal = 2131558433;
 			
-			// aapt resource value: 0x7f0d00d9
-			public const int notification_background = 2131558617;
+			// aapt resource value: 0x7f0d00da
+			public const int notification_background = 2131558618;
+			
+			// aapt resource value: 0x7f0d00d4
+			public const int notification_main_column = 2131558612;
 			
 			// aapt resource value: 0x7f0d00d3
-			public const int notification_main_column = 2131558611;
-			
-			// aapt resource value: 0x7f0d00d2
-			public const int notification_main_column_container = 2131558610;
+			public const int notification_main_column_container = 2131558611;
 			
 			// aapt resource value: 0x7f0d002c
 			public const int open_graph = 2131558444;
@@ -5528,11 +5531,11 @@ namespace NearToMe.Droid
 			// aapt resource value: 0x7f0d0036
 			public const int right = 2131558454;
 			
-			// aapt resource value: 0x7f0d00d8
-			public const int right_icon = 2131558616;
+			// aapt resource value: 0x7f0d00d9
+			public const int right_icon = 2131558617;
 			
-			// aapt resource value: 0x7f0d00d4
-			public const int right_side = 2131558612;
+			// aapt resource value: 0x7f0d00d5
+			public const int right_side = 2131558613;
 			
 			// aapt resource value: 0x7f0d0022
 			public const int satellite = 2131558434;
@@ -5645,8 +5648,8 @@ namespace NearToMe.Droid
 			// aapt resource value: 0x7f0d0062
 			public const int start = 2131558498;
 			
-			// aapt resource value: 0x7f0d00cf
-			public const int status_bar_latest_event_content = 2131558607;
+			// aapt resource value: 0x7f0d00d0
+			public const int status_bar_latest_event_content = 2131558608;
 			
 			// aapt resource value: 0x7f0d008d
 			public const int submenuarrow = 2131558541;
@@ -5687,8 +5690,8 @@ namespace NearToMe.Droid
 			// aapt resource value: 0x7f0d0015
 			public const int textinput_error = 2131558421;
 			
-			// aapt resource value: 0x7f0d00d5
-			public const int time = 2131558613;
+			// aapt resource value: 0x7f0d00d6
+			public const int time = 2131558614;
 			
 			// aapt resource value: 0x7f0d001c
 			public const int title = 2131558428;
@@ -5702,8 +5705,8 @@ namespace NearToMe.Droid
 			// aapt resource value: 0x7f0d0086
 			public const int title_template = 2131558534;
 			
-			// aapt resource value: 0x7f0d00c5
-			public const int toolbar = 2131558597;
+			// aapt resource value: 0x7f0d00c6
+			public const int toolbar = 2131558598;
 			
 			// aapt resource value: 0x7f0d0033
 			public const int top = 2131558451;
@@ -5744,8 +5747,8 @@ namespace NearToMe.Droid
 			// aapt resource value: 0x7f0d0016
 			public const int view_offset_helper = 2131558422;
 			
-			// aapt resource value: 0x7f0d00de
-			public const int visible = 2131558622;
+			// aapt resource value: 0x7f0d00df
+			public const int visible = 2131558623;
 			
 			// aapt resource value: 0x7f0d0028
 			public const int wide = 2131558440;

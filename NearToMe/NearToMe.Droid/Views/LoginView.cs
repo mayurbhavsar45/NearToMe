@@ -12,31 +12,36 @@ using Android.OS;
 using Android.Widget;
 using Java.Security;
 using NearToMe.Core.ViewModels;
+using NearToMe.Droid.Helpers;
+using Newtonsoft.Json;
+using Org.Json;
 using Xamarin.Facebook;
+using Xamarin.Facebook.AppEvents;
 using Xamarin.Facebook.Login;
 using Xamarin.Facebook.Login.Widget;
 
 namespace NearToMe.Droid.Views
 {
     [Activity(Label = "LoginView",Theme = "@style/NTMTheme.Base")]
-    public class LoginView : BaseView<LoginViewModel>,IFacebookCallback, GoogleApiClient.IOnConnectionFailedListener
+    public class LoginView : BaseView<LoginViewModel>,IFacebookCallback, GoogleApiClient.IOnConnectionFailedListener,GraphRequest.IGraphJSONObjectCallback
     {
         private ICallbackManager mCallBackManager;
         private GoogleApiClient mGoogleApiClient;
         public MyProfileTracker mProfileTracker;
-        Button btnGoogle;
+        Button btnGoogle,btnfb;
+        LoginButton loginBtn;
         const int RC_SIGN_IN = 2;
-
-        protected override int LayoutResource => Resource.Layout.LoginView;
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
             //for facebook
             FacebookSdk.SdkInitialize(this.ApplicationContext);
+            SetContentView(Resource.Layout.LoginView);
+
             try
             {
-                PackageInfo info = this.PackageManager.GetPackageInfo("natrix.NTM.droid",PackageInfoFlags.Signatures);
+                PackageInfo info = this.PackageManager.GetPackageInfo("natrix.NTM.droid", PackageInfoFlags.Signatures);
                 foreach (Android.Content.PM.Signature signature in info.Signatures)
                 {
                     MessageDigest md = MessageDigest.GetInstance("SHA");
@@ -66,12 +71,8 @@ namespace NearToMe.Droid.Views
                     .EnableAutoManage(this, this)
                     .AddApi(Auth.GOOGLE_SIGN_IN_API, gso)
                     .Build();
-
-            
-
             SetUI();                
         }
-
         private void OnProfileChanged(object sender, OnProfileChangedEventArgs e)
         {
             //facebook
@@ -85,7 +86,6 @@ namespace NearToMe.Droid.Views
             }
          
         }
-
         protected override void OnActivityResult(int requestCode, Result resultCode, Intent data)
         {
             base.OnActivityResult(requestCode, resultCode, data);
@@ -97,10 +97,14 @@ namespace NearToMe.Droid.Views
                 HandleSignInResult(result);
             }
         }
-
+        public override void OnBackPressed()
+        {
+            base.OnBackPressed();
+            Finish();
+        }  
         private void HandleSignInResult(GoogleSignInResult result)
         {
-            //google
+            
             if (result.IsSuccess)
             {
                 // Signed in successfully, show authenticated UI.
@@ -109,12 +113,17 @@ namespace NearToMe.Droid.Views
                 Toast.MakeText(this, acct.DisplayName + " " + acct.Email + " " + acct.FamilyName, ToastLength.Long).Show();               
             }
         }
-
         private void SetUI()
         {
-            LoginButton loginBtn = FindViewById<LoginButton>(Resource.Id.btnFacebook);
-            loginBtn.SetReadPermissions(new List<string>() { "email", "public_profile", "user_friends" });
             mCallBackManager = CallbackManagerFactory.Create();
+            btnfb = FindViewById<Button>(Resource.Id.btnfb);
+            btnfb.Click += delegate
+            {
+                loginBtn.PerformClick();
+                loginBtn.SetReadPermissions(new List<string>() { "email", "public_profile", "user_friends","user_about_me" });
+            };
+            loginBtn = FindViewById<LoginButton>(Resource.Id.btnFacebook);
+           
             loginBtn.RegisterCallback(mCallBackManager, this);
             btnGoogle = FindViewById<Button>(Resource.Id.btnGoogle);
             btnGoogle.Click += BtnGoogle_Click;
@@ -151,16 +160,23 @@ namespace NearToMe.Droid.Views
         
         public void OnSuccess(Java.Lang.Object result)
         {
-            ShowHomeView();
-            LoginResult loginResult = result as LoginResult;
-            Toast.MakeText(this, loginResult.AccessToken.UserId.ToString(),ToastLength.Short).Show();
+            GraphRequest request = GraphRequest.NewMeRequest(AccessToken.CurrentAccessToken, this);
+            Bundle parameters = new Bundle();
+            parameters.PutString("fields", "id,name,age_range,email");
+            request.Parameters = parameters;
+            request.ExecuteAsync();
         }
         public void OnConnectionFailed(ConnectionResult result)
         {
             //throw new NotImplementedException();
         }
+        public void OnCompleted(JSONObject json, GraphResponse response)
+        {
+            FacebookResult result = JsonConvert.DeserializeObject<FacebookResult>(json.ToString());
+            Toast.MakeText(this, result.name + " "+result.email, ToastLength.Short).Show();
+            StartActivity(typeof(MainView));
+        }
     }
-
     public class MyProfileTracker : ProfileTracker
     {
         public EventHandler<OnProfileChangedEventArgs> mOnProfileChanged;

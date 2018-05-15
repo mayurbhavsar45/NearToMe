@@ -20,9 +20,9 @@ namespace NearToMe.Droid
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
+            SetContentView(Resource.Layout.SplashScreen);
             MoveToActivity();
         }
-        protected override int LayoutResource => Resource.Layout.SplashScreen;
 
         async void MoveToActivity()
         {

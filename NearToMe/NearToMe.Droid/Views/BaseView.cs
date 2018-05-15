@@ -16,17 +16,13 @@ using NearToMe.Core.ViewModels;
 namespace NearToMe.Droid.Views
 {
     [Activity(Label = "BaseView", Theme = "@style/NTMTheme.Base")]
-    public abstract class BaseView<TViewModel> : MvxAppCompatActivity<TViewModel> where TViewModel :BaseViewModel
+    public class BaseView<TViewModel> : MvxAppCompatActivity<TViewModel> where TViewModel :BaseViewModel
     {
-        protected abstract int LayoutResource
-        {
-            get;
-        }
+       
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
             RequestWindowFeature(WindowFeatures.NoTitle);
-            SetContentView(LayoutResource);
         }     
     }
 }

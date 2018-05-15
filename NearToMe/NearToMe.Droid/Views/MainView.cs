@@ -37,7 +37,6 @@ namespace NearToMe.Droid.Views
         ImageButton btnLogout;
         private GoogleApiClient mGoogleApiClient;
         int i = 0;
-        protected override int LayoutResource => Resource.Layout.MainView;
 
         public void OnMapReady(GoogleMap googleMap)
         {
@@ -59,6 +58,7 @@ namespace NearToMe.Droid.Views
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
+            SetContentView(Resource.Layout.MainView);
             SetUI();
             InitializeLocationManager();
             EnableGPS();
